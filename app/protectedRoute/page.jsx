@@ -1,15 +1,23 @@
-"use client"
+"use client";
 
-import { auth } from "@/auth";
 import { redirect } from "next/navigation";
+import { useSession } from "next-auth/react";
+import { signOut } from "next-auth/react";
 
-const ProtectedRoute = async () => {
-  const session = await auth();
-  if (!session) return redirect("/");
+const ProtectedRoute = () => {
+  const { data: session } = useSession();
+  if (!session) return redirect("/login");
+
+  const handleClick = async () => {
+    await signOut();
+  };
 
   return (
     <div>
-        This is protected route
+      <button onClick={handleClick} className="btn">
+        Sign Out
+      </button>
+      This is protected route
     </div>
   );
 };

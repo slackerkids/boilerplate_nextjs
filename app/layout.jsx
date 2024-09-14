@@ -1,17 +1,20 @@
 import "@/styles/globals.css";
+import { auth } from "@/auth";
+import { SessionProvider } from "next-auth/react";
 
 export const metadata = {
   title: "Project",
   description: "Project",
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const session = await auth();
   return (
     <html lang="en">
       <body>
-        <main>
-          {children}
-        </main>
+        <SessionProvider session={session}>
+          <main>{children}</main>
+        </SessionProvider>
       </body>
     </html>
   );

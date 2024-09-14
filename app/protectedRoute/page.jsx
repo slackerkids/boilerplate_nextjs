@@ -17,7 +17,7 @@ const ProtectedRoute = () => {
       <button onClick={handleClick} className="btn">
         Sign Out
       </button>
-      This is protected route
+      <h1>This is Protected Route</h1>
     </div>
   );
 };

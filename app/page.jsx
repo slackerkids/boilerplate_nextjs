@@ -14,6 +14,8 @@ const Homepage = () => {
         <Link href="/login">Login</Link>
       )}
       <h1>Homepage</h1>
+
+      <Link className="btn btn-primary" href="#">LS Link 1</Link>
     </div>
   );
 };

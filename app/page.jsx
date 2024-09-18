@@ -14,9 +14,6 @@ const Homepage = () => {
         <Link href="/login">Login</Link>
       )}
       <h1>Homepage</h1>
-
-      <Link className="btn btn-primary" href="#">Monthly Plan</Link>
-      <Link className="btn btn-primary" href="#">Annual Plan</Link>
     </div>
   );
 };

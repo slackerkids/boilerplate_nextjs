@@ -1,11 +1,9 @@
-"use client";
-
 import Link from "next/link";
-import { useSession } from "next-auth/react";
+import { auth } from "@/auth";
+import Pricing from "@/components/Pricing";
 
-const Homepage = () => {
-  const { data: session } = useSession();
-
+const Homepage = async () => {
+  const session = await auth();
   return (
     <div>
       {session?.user ? (
@@ -14,6 +12,7 @@ const Homepage = () => {
         <Link href="/login">Login</Link>
       )}
       <h1>Homepage</h1>
+      <Pricing session={session} />
     </div>
   );
 };

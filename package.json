@@ -9,19 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@auth/mongodb-adapter": "^3.5.0",
+    "@auth/mongodb-adapter": "^3.7.2",
     "@lemonsqueezy/lemonsqueezy.js": "^3.3.1",
     "mongodb": "^6.9.0",
-    "mongoose": "^8.6.3",
-    "next": "14.2.12",
+    "mongoose": "^8.7.2",
+    "next": "14.2.15",
     "next-auth": "^5.0.0-beta.20",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
-    "daisyui": "^4.12.10",
+    "daisyui": "^4.12.13",
     "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.12"
+    "tailwindcss": "^3.4.14"
   }
 }
